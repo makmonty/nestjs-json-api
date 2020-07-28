@@ -2,6 +2,7 @@
   "name": "nestjs-json-api",
   "version": "1.0.0",
   "description": "A library to implement a JSON API in NestJs",
+  "homepage": "https://github.com/makmonty/nestjs-json-api",
   "author": {
     "name": "Ángel Brasero",
     "url": "https://makmonty.com"
