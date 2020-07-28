@@ -1,0 +1,16 @@
+{
+  "name": "nestjs-json-api",
+  "version": "1.0.0",
+  "description": "A library to implement a JSON API in NestJS",
+  "author": "",
+  "private": false,
+  "license": "MIT",
+  "dependencies": {
+    "@nestjs/common": "^7.3.2"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^7.4.1",
+    "@nestjs/schematics": "^7.0.1",
+    "@nestjs/testing": "^7.3.1"
+  }
+}
