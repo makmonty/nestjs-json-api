@@ -2,6 +2,7 @@
   "name": "nestjs-json-api",
   "version": "1.0.0",
   "description": "A library to implement a JSON API in NestJs",
+  "homepage": "https://github.com/makmonty/nestjs-json-api",
   "author": {
     "name": "Ángel Brasero",
     "url": "https://makmonty.com"
@@ -9,7 +10,8 @@
   "private": false,
   "license": "MIT",
   "scripts": {
-    "build": "nest build nestjs-json-api && cp libs/nestjs-json-api/package.json dist/libs/nestjs-json-api"
+    "build": "nest build nestjs-json-api && npm run copyfiles",
+    "copyfiles": "cp libs/nestjs-json-api/package.json dist/libs/nestjs-json-api"
   },
   "dependencies": {
     "@nestjs/common": "^7.3.2",
