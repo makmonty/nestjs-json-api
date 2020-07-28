@@ -6,11 +6,18 @@
   "private": false,
   "license": "MIT",
   "dependencies": {
-    "@nestjs/common": "^7.3.2"
+    "@nestjs/common": "^7.3.2",
+    "@nestjs/mongoose": "^7.0.2",
+    "@types/mongoose": "^5.7.32",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.26",
+    "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
     "@nestjs/cli": "^7.4.1",
     "@nestjs/schematics": "^7.0.1",
-    "@nestjs/testing": "^7.3.1"
+    "@nestjs/testing": "^7.3.1",
+    "@types/express": "^4.17.7",
+    "typescript": "^3.9.6"
   }
 }

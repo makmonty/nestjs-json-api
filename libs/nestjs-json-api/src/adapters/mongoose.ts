@@ -2,7 +2,6 @@ import { JsonApiDatabaseAdapter } from '../types/database-adapter.interface';
 import { JsonApiOptions } from '../types/options.interface';
 import { Document, DocumentQuery } from 'mongoose';
 import * as mongoose from 'mongoose';
-import { InjectModel } from '@nestjs/mongoose';
 
 export class JsonApiMongooseAdapter implements JsonApiDatabaseAdapter {
   async find(
