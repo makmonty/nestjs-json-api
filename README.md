@@ -1,6 +1,6 @@
 # NESTJS JSON API
 
-A library to easily implement a JSON API in your NestJS application.
+A library to easily implement a JSON API in your NestJs application.
 
 This library contains a set of decorators and a service to make everything easier.
 
@@ -69,6 +69,7 @@ class UserController {
     // Do stuff with the doc
     return doc;
   }
+  
   @Delete(idParamKey)
   @JsonApiDelete('UserModel')
   delete() {

@@ -1,0 +1,17 @@
+{
+  "name": "nestjs-json-api",
+  "version": "1.0.0",
+  "description": "A library to implement a JSON API in NestJS",
+  "author": {
+    "name": "Ángel Brasero",
+    "url": "https://makmonty.com"
+  },
+  "private": false,
+  "license": "MIT",
+  "peerDependencies": {
+    "@nestjs/common": "^7.3.2",
+    "@nestjs/mongoose": "^7.0.2",
+    "mongoose": "^5.9.26",
+    "reflect-metadata": "^0.1.13"
+  }
+}

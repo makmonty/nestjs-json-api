@@ -1,6 +1,9 @@
 {
+  "collection": "@nestjs/schematics",
+  "root": "libs/nestjs-json-api",
+  "sourceRoot": "libs/nestjs-json-api/src",
   "projects": {
-    "nestjs-jsonapi": {
+    "nestjs-json-api": {
       "type": "library",
       "root": "libs/nestjs-json-api",
       "entryFile": "index",
