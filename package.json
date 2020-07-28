@@ -12,7 +12,7 @@
   "scripts": {
     "build": "nest build nestjs-json-api && npm run copyfiles",
     "copyfiles": "cp LICENSE README.md libs/nestjs-json-api/package.json dist/libs/nestjs-json-api",
-    "publish": "npm run publish dist/libs/nestjs-json-api"
+    "publish": "npm publish dist/libs/nestjs-json-api"
   },
   "dependencies": {
     "@nestjs/common": "^7.3.2",
