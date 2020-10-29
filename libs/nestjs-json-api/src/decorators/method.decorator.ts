@@ -111,7 +111,7 @@ export const JsonApiFind = <T>(
     descriptor.value = async function (...args: any) {
       const service: JsonApiService = this[JSON_API_SERVICE_KEY];
       const req: Request = args[0];
-      let doc: JsonApiTopLevelObject<T>;
+      let doc: JsonApiTopLevelObject<T[]>;
 
       try {
         doc = await service.find(modelName, req.query, options);
