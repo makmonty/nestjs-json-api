@@ -21,7 +21,7 @@ export class JsonApiService {
     modelName: string,
     query: any,
     options?: JsonApiOptions,
-  ): Promise<JsonApiTopLevelObject<T>> {
+  ): Promise<JsonApiTopLevelObject<T[]>> {
     const data = await this.adapter.find<T>(modelName, query, options);
     return this.hydrateTopDocument(data, undefined, modelName, options);
   }

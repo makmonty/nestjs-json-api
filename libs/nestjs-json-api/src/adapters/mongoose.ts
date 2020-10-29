@@ -16,6 +16,10 @@ export class JsonApiMongooseAdapter implements JsonApiDatabaseAdapter {
       this.populate(dbQuery, options.populate);
     }
 
+    if (options?.collation) {
+      dbQuery.collation(options.collation);
+    }
+
     if (query.sort) {
       const fields: Array<string> = query.sort.split(',');
       const sort = {};

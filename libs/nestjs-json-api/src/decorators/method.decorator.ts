@@ -8,6 +8,36 @@ import { JsonApiOptions } from '../types/options.interface';
 const reqInject = Req();
 const serviceInject = Inject(JsonApiService);
 
+export const JsonApiResponse = <T>(
+  modelName: string
+): MethodDecorator => {
+  const decorator: MethodDecorator = (
+    target: any,
+    _propertyKey: string,
+    descriptor: TypedPropertyDescriptor<any>,
+  ) => {
+    const oldMethod: Function = descriptor.value;
+    serviceInject(target, JSON_API_SERVICE_KEY);
+
+    descriptor.value = async function (...args: any) {
+      const service: JsonApiService = this[JSON_API_SERVICE_KEY];
+      let doc: JsonApiTopLevelObject<T>;
+
+      try {
+        const result = oldMethod.apply(this, args);
+        doc = service.hydrateTopDocument(result, undefined, modelName);
+      } catch (error) {
+        doc = service.hydrateTopDocument(undefined, [error], modelName);
+        throw new HttpException(doc, error.status || 500);
+      }
+
+      return doc;
+    };
+  };
+
+  return decorator;
+}
+
 export const JsonApiFindById = <T>(
   modelName: string,
   paramKey = 'id',
